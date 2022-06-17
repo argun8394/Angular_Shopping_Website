@@ -1,0 +1,44 @@
+<div class="card-top container-fluid">
+  <div class="container d-flex">
+    <div class="item">
+      <a>
+        <img src="https://image.oppo.com/content/dam/oppo/common/mkt/v2-2/darwin/f19-pro/navigation/Reno5-F-navigation-purple-v2.png.thumb.webp" alt="">
+        <h6>All Products</h6>
+      </a>
+
+    </div>
+    <div class="item">
+      <a>
+        <img src="https://image.oppo.com/content/dam/oppo/common/mkt/v2-2/darwin/f19-pro/navigation/Reno5-F-navigation-purple-v2.png.thumb.webp" alt="">
+        <h6>Electronics</h6>
+      </a>
+    </div>
+    <div class="item">
+      <a>
+        <img src="https://image.oppo.com/content/dam/oppo/common/mkt/v2-2/darwin/f19-pro/navigation/Reno5-F-navigation-purple-v2.png.thumb.webp" alt="">
+        <h6>Fashion</h6>
+      </a>
+    </div>
+    <div class="item">
+      <a>
+        <img style="width: 62px; margin-top: 5px" src="https://image.oppo.com/content/dam/oppo/common/mkt/v2-2/darwin/f19-pro/navigation/Reno5-F-navigation-purple-v2.png.thumb.webp" alt="">
+        <h6>Jewllery</h6>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <ng-container *ngFor="let item of productList">
+      <div class="card col-md-3">
+        <img src="{{item.image}}" alt="">
+        <h5 style="white-space: nowrap; overflow:hidden; text-overflow:ellipsis; max-width:100ch">{{item.title}}</h5>
+        <p style="white-space: nowrap; overflow:hidden; text-overflow:ellipsis; max-width:100ch">{{item.description}}</p>
+        <p><strong>Price: </strong>${{item.price}}</p>
+        <button class="btn btn-primary" (click)="addtocart(item)">Add to cart</button>
+      </div>
+    </ng-container>
+
+  </div>
+</div>
