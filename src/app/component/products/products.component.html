@@ -1,27 +1,27 @@
 <div class="card-top container-fluid">
   <div class="container d-flex">
     <div class="item">
-      <a>
-        <img src="https://image.oppo.com/content/dam/oppo/common/mkt/v2-2/darwin/f19-pro/navigation/Reno5-F-navigation-purple-v2.png.thumb.webp" alt="">
+      <a (click)="filter('')">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKvQH7sOs7xdXi_bOg4qQ9CuWfFaRtbA5_NA&usqp=CAU" alt="">
         <h6>All Products</h6>
       </a>
 
     </div>
     <div class="item">
-      <a>
-        <img src="https://image.oppo.com/content/dam/oppo/common/mkt/v2-2/darwin/f19-pro/navigation/Reno5-F-navigation-purple-v2.png.thumb.webp" alt="">
+      <a (click)="filter('electronics')">
+        <img src="https://p.kindpng.com/picc/s/140-1403291_electronics-hd-png-download.png" alt="">
         <h6>Electronics</h6>
       </a>
     </div>
     <div class="item">
-      <a>
-        <img src="https://image.oppo.com/content/dam/oppo/common/mkt/v2-2/darwin/f19-pro/navigation/Reno5-F-navigation-purple-v2.png.thumb.webp" alt="">
+      <a (click)="filter('fashion')">
+        <img src="https://www.seekpng.com/png/small/114-1146781_clothes-shirt-clothing-wear-comments-icon-clothes-sale.png" alt="">
         <h6>Fashion</h6>
       </a>
     </div>
     <div class="item">
-      <a>
-        <img style="width: 62px; margin-top: 5px" src="https://image.oppo.com/content/dam/oppo/common/mkt/v2-2/darwin/f19-pro/navigation/Reno5-F-navigation-purple-v2.png.thumb.webp" alt="">
+      <a (click)="filter('jewelery')">
+        <img style="width: 62px; margin-top: 5px" src="https://www.designfreelogoonline.com/wp-content/uploads/2021/03/00319-DIAMOND-Jewelry-03.png" alt="">
         <h6>Jewllery</h6>
       </a>
     </div>
@@ -30,7 +30,7 @@
 
 <div class="container">
   <div class="row">
-    <ng-container *ngFor="let item of productList">
+    <ng-container *ngFor="let item of filterCategory | filter:searchKey:'title'">
       <div class="card col-md-3">
         <img src="{{item.image}}" alt="">
         <h5 style="white-space: nowrap; overflow:hidden; text-overflow:ellipsis; max-width:100ch">{{item.title}}</h5>
